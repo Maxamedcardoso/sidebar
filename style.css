@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.sidebar{
+    
+  
+    height: 100%;
+    width: 250px;
+    background-color: rgb(42, 114, 165);
+    left: -250px;
+    position: fixed;
+    transition: .5s;
+   
+}
+.sidebar header{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    background-color: rgb(56, 40, 232);
+   
+    user-select: none;
+    line-height: 70px;
+}
+.sidebar ul  a{
+    display: block;
+    height: 100%;
+    width: 100%;
+color: antiquewhite;
+line-height: 65px;
+padding-left: 53px;
+box-sizing: border-box;
+transition: .5s;
+border-top: 1px solid rgb(255, 255, 255 ,.1);
+border-bottom: 1px solid black;
+ font-size:19px;
+
+
+
+
+}
+ul li:hover a{
+    padding-left: 26px;
+}
+
+#check{
+    display: none;
+}
+label #btn,#cancel{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: black;
+    color: aliceblue;
+   
+  
+    
+}
+#btn{
+    top: 25px;
+    left: 40px;
+    font-size: 24px;
+      padding: 10px 5px;
+      transition: all .5s;
+}
+
+#cancel{
+    left:-195px;
+    top: 17px;
+    z-index: 1111;
+    font-size: 24px;
+     padding: 5px;
+     margin-left: 12px;
+     transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+   opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+ margin-left: 250px;
+
+}
+section{
+  background:url(3d-rendering-hexagonal-texture-background_23-2150796421.avif) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all.5s;
+  
+}
+
